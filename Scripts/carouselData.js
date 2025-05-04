@@ -1,0 +1,392 @@
+// Carousel Items
+const carouselItems = [
+  {
+    image: 'Cars/BMW-i8.jpg',
+    company: 'BMW',
+    name: 'BMW i8',
+    variant: 'Coupe',
+    specs: {
+      engine: '1.5L Turbo',
+      power: '98 kW / 131hp / 133 PS',
+      torque: '320 Nm / 236 lb·ft',
+      weight: '3274 lbs / 1485 kg',
+      acceleration: 'Under 4.2 seconds',
+      topSpeed: '155 mph',
+    },
+    links: {
+      buyNow: 'https://www.bmwpalmsprings.com/bmw-i8.html',
+      learnMore: 'https://www.youtube.com/watch?v=1JTv5XCi9-Y',
+    },
+  },
+  {
+    image: 'Cars/McLaren Senna.jpg',
+    company: 'MCLAREN',
+    name: 'McLaren Senna',
+    variant: 'XP',
+    specs: {
+      engine: '4.0L V8 Twin Turbo',
+      power: '588 kW / 789 hp / 800 PS',
+      torque: '800 Nm / 590 lb-ft',
+      weight: '2641 lbs / 1198 kg',
+      acceleration: 'Under 2.8 seconds',
+      topSpeed: '211 mph',
+    },
+    links: {
+      buyNow: 'https://www.dupontregistry.com/autos/results/mclaren/senna',
+      learnMore: 'https://youtu.be/UZwXQCSY8ac?si=oRJUvTN0p7QFlGvo',
+    },
+  },
+  {
+    image: 'Cars/Porsche 911 GT3 Carrera RS.webp',
+    company: 'PORSCHE',
+    name: 'Porsche 911',
+    variant: 'GT3 RS',
+    specs: {
+      engine: '4.0L Flat-Six',
+      power: '386 kW / 517 hp / 525 PS',
+      torque: '465 Nm / 343 lb-ft',
+      weight: '3197 lbs / 1450 kg',
+      acceleration: 'Under 3.0 seconds',
+      topSpeed: '184 mph',
+    },
+    links: {
+      buyNow:
+        'https://www.dupontregistry.com/autos/results/porsche/911--gt3--rs',
+      learnMore: 'https://youtu.be/pUnLLfO1svo?si=Utqcamk3BNOf2u00',
+    },
+  },
+  {
+    image: 'Cars/Pagani Huayra.jpg',
+    company: 'PAGANI',
+    name: 'Pagani Huayra',
+    variant: 'Coupe',
+    specs: {
+      engine: '6.0L V12 Twin Turbo',
+      power: '537 kW / 720 hp / 730 PS',
+      torque: '1000 Nm / 738 lb-ft',
+      weight: '2976 lbs / 1350 kg',
+      acceleration: 'Under 2.8 seconds',
+      topSpeed: '238 mph',
+    },
+    links: {
+      buyNow: 'https://luxurypulse.com/sales/show/4045-pagani-huayra-coupe',
+      learnMore: 'https://youtu.be/WnyPtKQKP3Y?si=VJMC1ZlScDrpkXl3',
+    },
+  },
+  {
+    image: 'Cars/Audi-r8.jpg',
+    company: 'AUDI',
+    name: 'Audi R8',
+    variant: 'V10 Performance',
+    specs: {
+      engine: '5.2L V10',
+      power: '449 kW / 602 hp / 610 PS',
+      torque: '560 Nm / 413 lb-ft',
+      weight: '3638 lbs / 1650 kg',
+      acceleration: 'Under 3.1 seconds',
+      topSpeed: '199 mph',
+    },
+    links: {
+      buyNow:
+        'https://www.autotrader.co.uk/cars/used/audi/r8/performance?refresh=true',
+      learnMore: 'https://youtu.be/aUq3n_PVKmk?si=ZT3GypilH6PKvhMR',
+    },
+  },
+  {
+    image: 'Cars/Ford Raptor.jpg',
+    company: 'FORD',
+    name: 'Ford F-150',
+    variant: 'Raptor',
+    specs: {
+      engine: '3.5L V6 Twin Turbo',
+      power: '335 kW / 450 hp / 456 PS',
+      torque: '691 Nm / 510 lb-ft',
+      weight: '3638 lbs / 1650 kg',
+      acceleration: 'Under 5.5 seconds',
+      topSpeed: '120 mph',
+    },
+    links: {
+      buyNow:
+        'https://www.truecar.com/new-cars-for-sale/listings/ford/f-150/?trim=raptor',
+      learnMore: 'https://youtu.be/se0cUPhIJdI?si=4YOMzAOLsfels4CC',
+    },
+  },
+  {
+    image: 'Cars/Hennessey Venom F5.jpg',
+    company: 'HENNESSEY',
+    name: 'Hennessey Venom',
+    variant: 'F5',
+    specs: {
+      engine: '6.6L V8 Twin Turbo',
+      power: '1355 kW / 1817 hp / 1842 PS',
+      torque: '1617 Nm / 1193 lb-ft',
+      weight: '2998 lbs / 1360 kg',
+      acceleration: 'Under 2.6 seconds',
+      topSpeed: '311 mph',
+    },
+    links: {
+      buyNow: 'https://www.venomgt.com/',
+      learnMore: 'https://youtu.be/uigk_kgwAVE?si=fRwAJNXXsaYSe1rg',
+    },
+  },
+  {
+    image: 'Cars/Ford Mustang GT.jpg',
+    company: 'FORD',
+    name: 'Ford Mustang',
+    variant: 'GT',
+    specs: {
+      engine: '5.0L V8',
+      power: '335 kW / 450 hp / 456 PS',
+      torque: '557 Nm / 410 lb-ft',
+      weight: '3730 lbs / 1692 kg',
+      acceleration: 'Under 4.2 seconds',
+      topSpeed: '163 mph',
+    },
+    links: {
+      buyNow:
+        'https://www.motors.co.uk/ford/mustang/year/2022/used-cars/?srsltid=AfmBOoqmRLvfzPXyqjchcX2zZe_ijphgcWe8s3nSxCdW7TXP8PmrMTKt',
+      learnMore: 'https://youtu.be/5OS2XULaATI?si=sFl3FMi7w4Bz_wbY',
+    },
+  },
+  {
+    image: 'Cars/Aston Martin Vantage.jpg',
+    company: 'ASTON MARTIN',
+    name: 'Aston Martin',
+    variant: 'Vantage',
+    specs: {
+      engine: '4.0L V8 Twin Turbo',
+      power: '375 kW / 503 hp / 510 PS',
+      torque: '682 Nm / 505 lb-ft',
+      weight: '3527 lbs / 1600 kg',
+      acceleration: 'Under 3.6 seconds',
+      topSpeed: '190 mph',
+    },
+    links: {
+      buyNow: 'https://carvago.com/cars/aston-martin/vantage',
+      learnMore: 'https://youtu.be/-9Oj3oopxlA?si=hGzGlxl6G6rg8LXW',
+    },
+  },
+  {
+    image: 'Cars/Toyota-Tacoma-TRD-Pro.jpg',
+    company: 'TOYOTA',
+    name: 'Toyota Tacoma',
+    variant: 'TRD PRO',
+    specs: {
+      engine: '3.5L V6',
+      power: '207 kW / 278 hp / 282 PS',
+      torque: '358 Nm / 265 lb-ft',
+      weight: '4445 lbs / 2016 kg',
+      acceleration: 'Under 7.5 seconds',
+      topSpeed: '110 mph',
+    },
+    links: {
+      buyNow: 'https://www.buyatoyota.com/home/vehicles/tacoma/',
+      learnMore: 'https://youtu.be/egW8Mw8AlGA?si=NJzOlPaX9jmLxi5K',
+    },
+  },
+  {
+    image: 'Cars/Nissan GTR R35.jpeg',
+    company: 'NISSAN',
+    name: 'Nissan GT-R',
+    variant: 'R35',
+    specs: {
+      engine: '3.8L V6 Twin Turbo',
+      power: '421 kW / 565 hp / 573 PS',
+      torque: '630 Nm / 467 lb-ft',
+      weight: '3935 lbs / 1785 kg',
+      acceleration: 'Under 2.9 seconds',
+      topSpeed: '196 mph',
+    },
+    links: {
+      buyNow: 'https://www.nissanusa.com/vehicles/sports-cars/gt-r.html',
+      learnMore: 'https://youtu.be/AaA1wd-8Kkk?si=SMkHyR2jbk4iVSUV',
+    },
+  },
+  {
+    image: 'Cars/W Motors Fenyr Supersport.jpg',
+    company: 'W MOTORS',
+    name: 'W Motors',
+    variant: 'Fenyr SuperSport',
+    specs: {
+      engine: '4.0L Twin Turbo',
+      power: '671 kW / 900 hp / 912 PS',
+      torque: '1100 Nm / 815 lb-ft',
+      weight: '2976 lbs / 1350 kg',
+      acceleration: 'Under 2.7 seconds',
+      topSpeed: '248 mph',
+    },
+    links: {
+      buyNow: 'https://www.wmotors.ae/fenyr-supersport.html',
+      learnMore: 'https://youtu.be/KMjIwd01QAE?si=mTcaB041lMyeX2pI',
+    },
+  },
+  {
+    image: 'Cars/Chevrolet Corvette Stingray.jpg',
+    company: 'CHEVROLET',
+    name: 'Chevrolet Corvette',
+    variant: 'Stingray',
+    specs: {
+      engine: '6.2L V8',
+      power: '365 kW / 490 hp / 497 PS',
+      torque: '628 Nm / 465 lb-ft',
+      weight: '3366 lbs / 1527 kg',
+      acceleration: 'Under 2.9 seconds',
+      topSpeed: '194 mph',
+    },
+    links: {
+      buyNow:
+        'https://www.autotrader.co.uk/cars/used/chevrolet/corvette-stingray',
+      learnMore: 'https://youtu.be/-qOH-PEXmNI?si=oVRZpBQQvOHzW72C',
+    },
+  },
+  {
+    image: 'Cars/Koenigsegg Agera R.jpg',
+    company: 'KOENIGSEGG',
+    name: 'Koenigsegg Agera',
+    variant: 'R',
+    specs: {
+      engine: '5.0L V8 Twin Turbo',
+      power: '850 kW / 1140 hp / 1155 PS',
+      torque: '1195 Nm / 885 lb-ft',
+      weight: '2932 lbs / 1330 kg',
+      acceleration: 'Under 2.8 seconds',
+      topSpeed: '273 mph',
+    },
+    links: {
+      buyNow: 'https://luxurypulse.com/sales/show/4360-koenigsegg-agera-r',
+      learnMore: 'https://youtu.be/YfyWBB1Z35c?si=CMEil-ds99TLbfsV',
+    },
+  },
+  {
+    image: 'Cars/Mercedes-Benz G-Class.jpg',
+    company: 'MERCEDES',
+    name: 'Mercedes Benz',
+    variant: 'AMG G 63',
+    specs: {
+      engine: '4.0L V8 Twin Turbo',
+      power: '430 kW / 577 hp / 585 PS',
+      torque: '846 Nm / 627 lb-ft',
+      weight: '5800 lbs / 2630 kg',
+      acceleration: 'Under 4.2 seconds',
+      topSpeed: '137 mph',
+    },
+    links: {
+      buyNow:
+        'https://www.mercedes-benz-mena.com/dubai/en/models/g-class-w465/',
+      learnMore: 'https://youtu.be/CpGr2K9Ugjs?si=bMyaa60cKSB54UHA',
+    },
+  },
+  {
+    image: 'Cars/Bugatti Chiron.jpg',
+    company: 'BUGATTI',
+    name: 'Bugatti Chiron',
+    variant: 'Sport',
+    specs: {
+      engine: '8.0L W16 Quad Turbo',
+      power: '1103 kW / 1479 hp / 1499 PS',
+      torque: '1600 Nm / 1180 lb-ft',
+      weight: '4360 lbs / 1978 kg',
+      acceleration: 'Under 2.4 seconds',
+      topSpeed: '261 mph',
+    },
+    links: {
+      buyNow: 'https://www.bugatti.com/en/models/chiron-sport',
+      learnMore: 'https://youtu.be/a5YDECRVk5s?si=hL8k5vkPR142pt8Q',
+    },
+  },
+  {
+    image: 'Cars/Lamborghini Aventador.jpg',
+    company: 'LAMBORGHINI',
+    name: 'Lamborghini Aventador',
+    variant: 'S',
+    specs: {
+      engine: '6.5L V12',
+      power: '544 kW / 730 hp / 740 PS',
+      torque: '687 Nm / 509 lb-ft',
+      weight: '3836 lbs / 1740 kg',
+      acceleration: 'Under 2.9 seconds',
+      topSpeed: '217 mph',
+    },
+    links: {
+      buyNow:
+        'https://www.dupontregistry.com/autos/results/lamborghini/aventador--s',
+      learnMore: 'https://youtu.be/HKlf2QglJiM?si=XYxpPJvzZNwr8ftX',
+    },
+  },
+  {
+    image: 'Cars/Ferrari_SF90_XX_Stradale.jpeg',
+    company: 'FERRARI',
+    name: 'Ferrari SF90 XX',
+    variant: 'Stradale',
+    specs: {
+      engine: '6.8L V8 Twin Turbo',
+      power: '586 kW / 786 hp / 797 PS',
+      torque: '804 Nm / 595 lb-ft',
+      weight: '3439 lbs / 1560 kg',
+      acceleration: 'Under 2.3 seconds',
+      topSpeed: '199 mph',
+    },
+    links: {
+      buyNow:
+        'https://preowned.ferrari.com/en-US/r/north-america/used-ferrari/usa/sf90-stradale/rfcm',
+      learnMore: 'https://youtu.be/8RDB_Pa5jhQ?si=xTIhfOm6dt5iaoem',
+    },
+  },
+  {
+    image: 'Cars/Jaguar F-Type.webp',
+    company: 'JAGUAR',
+    name: 'Jaguar F-Type',
+    variant: 'Coupe',
+    specs: {
+      engine: '5.0L V8',
+      power: '331 kW / 444 hp / 450 PS',
+      torque: '578 Nm / 428 lb-ft',
+      weight: '3450 lbs / 1565 kg',
+      acceleration: 'Under 3.5 seconds',
+      topSpeed: '155 mph',
+    },
+    links: {
+      buyNow: 'https://www.jaguarusa.com/all-models/f-type/index.html',
+      learnMore: 'https://youtu.be/PunJGevSv8w?si=yzBkkTT1EL-hqABv',
+    },
+  },
+  {
+    image: 'Cars/Toyota Supra.jpg',
+    company: 'TOYOTA',
+    name: 'Toyota Supra',
+    variant: 'MK5',
+    specs: {
+      engine: '3.0L Turbo',
+      power: '285 kW / 382 hp / 387 PS',
+      torque: '497 Nm / 368 lb-ft',
+      weight: '3300 lbs / 1497 kg',
+      acceleration: 'Under 3.9 seconds',
+      topSpeed: '155 mph',
+    },
+    links: {
+      buyNow: 'https://www.autoscout24.com/lst/toyota/supra',
+      learnMore: 'https://youtu.be/OPtMEvFzfcw?si=H0zYIXoEpWcupbef',
+    },
+  },
+  {
+    image: 'Cars/Rolls-Royce-Phantom.jpg',
+    company: 'ROLLS ROYCE',
+    name: 'Rolls Royce',
+    variant: 'Phantom',
+    specs: {
+      engine: '6.75L V12 Twin Turbo',
+      power: '419 kW / 563 hp / 571 PS',
+      torque: '896 Nm / 664 lb-ft',
+      weight: '5650 lbs / 2563 kg',
+      acceleration: 'Under 5.5 seconds',
+      topSpeed: '155 mph',
+    },
+    links: {
+      buyNow:
+        'https://www.rolls-roycemotorcars.com/en_GB/showroom/phantom.html',
+      learnMore: 'https://youtu.be/Jajr8OJii3M?si=PpFhlerh9q-h9Ivu',
+    },
+  },
+]
+
+export default carouselItems
